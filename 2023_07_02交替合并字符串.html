@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1768.交替合并字符串
+    function getResult(word1,word2){
+      let strLength=Math.max(word1.length,word2.length);
+      let result='';
+      for(var i=0;i<strLength;i++){
+        if([...word1][i]){
+          result+=[...word1][i];
+        }
+        if([...word2][i]){
+          result+=[...word2][i];
+        }
+      }
+      return result;
+    }
+    console.log(getResult('apreeggy',"bcrt"));
+  </script>
+</body>
+</html>
