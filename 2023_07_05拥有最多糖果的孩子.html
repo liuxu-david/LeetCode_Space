@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拥有最多糖果的孩子</title>
+</head>
+<body>
+  <script>
+    // 1431. 拥有最多糖果的孩子
+    // 第一种方法
+    function getResult(arrs,value){
+      let newArr=[];
+      newArr=arrs.map(item => {
+        if(item+value>=Math.max(...arrs)){
+          return item=true;
+        }else{
+         return item=false;
+        }
+      });
+      return newArr;
+    }
+
+    // 第二种方法
+    // function getResult(arrs,value){
+    //   let newArr=[];
+    //   arrs.forEach(item => {
+    //     if(item+value>=Math.max(...arrs)){
+    //       newArr.push(true);
+    //     }else{
+    //       newArr.push(false);
+    //     }
+    //   });
+    //   return newArr;
+    // }
+    console.log(getResult([2,3,5,1,3],3));
+    // console.log([1,5,8,3,0].sort((a,b)=>a-b));
+    // let a=[1,5,8,3,0]
+    // console.log(Math.max(...a));
+  </script>
+</body>
+</html>
